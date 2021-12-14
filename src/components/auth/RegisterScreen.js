@@ -14,6 +14,8 @@ export const RegisterScreen = () => {
 
     //importamos useSelector()
     //esto para obtener el mensaje de error desde el state (store)
+    //el state devuelve auth y ui que es lo que tenemos configurado hasta ahora
+    //(revisar store.js entonces selector toma de ese estado el ui en este caso)
     const {msgError} = useSelector(state => state.ui);
     //console.log(msgError)
     //useForm devuelve un arreglo ver src/hook/useForm.js
