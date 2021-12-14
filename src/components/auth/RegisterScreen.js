@@ -4,6 +4,7 @@ import { useForm } from '../../hooks/useForm';
 import { useDispatch, useSelector } from 'react-redux';
 import validator from 'validator';
 import { setError, removeError } from '../../actions/ui';
+import { startRegisterWithEmailPasswordName } from '../../actions/auth';
 
 
 export const RegisterScreen = () => {
@@ -35,7 +36,8 @@ export const RegisterScreen = () => {
 
         //si la validacion del formulario es correcta haremos el dispatch
         if (isFormValid()) {
-            console.log('formulario correcto');
+            //console.log('formulario correcto');
+            dispatch(startRegisterWithEmailPasswordName(email, password,name))
         }
 
     }
@@ -72,8 +74,6 @@ export const RegisterScreen = () => {
             <h3 className="auth__title">Register</h3>
 
             <form onSubmit={handleRegister}>
-               
-                
                 <input
                     type="text"
                     placeholder="Name"
@@ -83,7 +83,6 @@ export const RegisterScreen = () => {
                     value={name}
                     onChange={handleInputChange}
                 />
-
                 <input
                     type="text"
                     placeholder="Email"
@@ -93,7 +92,6 @@ export const RegisterScreen = () => {
                     value={email}
                     onChange={handleInputChange}
                 />
-
                 <input
                     type="password"
                     placeholder="Password"
@@ -102,7 +100,6 @@ export const RegisterScreen = () => {
                     value={password}
                     onChange={handleInputChange}
                 />
-
                 <input
                     type="password"
                     placeholder="Confirm password"
@@ -111,16 +108,13 @@ export const RegisterScreen = () => {
                     value={password2}
                     onChange={handleInputChange}
                 />
-
-{
-                    msgError !== null && <div className="invalid-feedback">{msgError}</div>
+                {   msgError !== null 
+                    && 
+                    <div className="invalid-feedback">{msgError}</div>
                 }
                 
-                <button
-                    type="submit"
-                    className="btn btn-primary btn-block mb-5"
-                >
-                    Register
+                <button type="submit" className="btn btn-primary btn-block mb-5">
+                Register
                 </button>
 
 
