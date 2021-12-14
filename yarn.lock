@@ -5244,7 +5244,7 @@
     "language-tags" "^1.0.5"
     "minimatch" "^3.0.4"
 
-"eslint-plugin-react-hooks@^4.0.8", "eslint-plugin-react-hooks@^4.2.0":
+"eslint-plugin-react-hooks@^4.0.8", "eslint-plugin-react-hooks@^4.2.0", "eslint-plugin-react-hooks@^4.3.0":
   "integrity" "sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA=="
   "resolved" "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz"
   "version" "4.3.0"
@@ -12124,6 +12124,11 @@
   dependencies:
     "spdx-correct" "^3.0.0"
     "spdx-expression-parse" "^3.0.0"
+
+"validator@^13.7.0":
+  "integrity" "sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw=="
+  "resolved" "https://registry.npmjs.org/validator/-/validator-13.7.0.tgz"
+  "version" "13.7.0"
 
 "value-equal@^1.0.1":
   "integrity" "sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw=="

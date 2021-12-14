@@ -1,8 +1,10 @@
 import { compose } from 'redux-devtools-extension';
-
+import thunk from 'redux-thunk'
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import { authReducer } from '../reducers/authReducer';
-import thunk from 'redux-thunk'
+import { uiReducer } from '../reducers/uiReducer';
+
+
 
 const composeEnhancers = (
     typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) 
@@ -12,7 +14,8 @@ const composeEnhancers = (
 y este se lo enviamos al create store */
 const reducers = combineReducers({
     //estructura del store, manejada por authReducer
-    auth: authReducer 
+    auth: authReducer ,
+    ui: uiReducer 
 });
 //CREAR LA TIENDA DE DATOS - INFORMACION
 //AHORA PARA INDICARLE A REACT QUE TIENE UN STORE

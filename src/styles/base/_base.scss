@@ -31,3 +31,11 @@ main {
 .pointer {
     cursor: pointer;
 }
+.invalid-feedback{
+    color:red;
+    text-align:left;
+    font-weight: 400;
+    font-size:12px;
+    text-align: center;
+    padding:5%;
+}
