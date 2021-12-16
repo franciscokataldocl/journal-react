@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm';
-import {useDispatch} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 
 export const LoginScreen = () => {
 
     //usedispatch dde react-redux nos permite disparar acciones
     const dispatch = useDispatch();
+
+    const {loading} = useSelector(state => state.ui)
 
     //USO DEL HOOK USEFORM() ----------------------------
     //ddestructuramos lo que viene del hook como arreglo
@@ -80,13 +82,21 @@ const handleGoogleLogin = ()=>{
                     onChange={handleInputChange}
                 />
 
-
-                <button
+                {
+                    loading 
+                    ? <div className='loading_container'>
+                        <img 
+                        alt="asdsad" 
+                        className='loading_button' 
+                        src="https://c.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif"/>
+                      </div>
+                    : <button
                     type="submit"
                     className="btn btn-primary btn-block"
-                >
-                    Login
-                </button>
+                    disabled={loading}>Login </button>
+                } 
+              
+                
 
                 
                 <div className="auth__social-networks">
