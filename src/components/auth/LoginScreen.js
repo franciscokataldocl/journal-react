@@ -15,7 +15,7 @@ export const LoginScreen = () => {
     /*Acá podemos definir los parametros que necesitemos para cada caso
     el hook de todas maneras lo procesara */
 const [formValues, handleInputChange] = useForm({
-    email: 'hola@test.cl',
+    email: 'test@gmail.com',
     password: '123456'
 });
 
